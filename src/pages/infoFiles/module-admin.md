@@ -1,6 +1,6 @@
 ---
     title: 'Contenido Pagina'
-    layout: '../../layouts/layout.astro'
+    layout: '../../layouts/Layout.astro'
 ---
 
 # Módulo de Administración
