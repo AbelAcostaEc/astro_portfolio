@@ -1,24 +1,26 @@
 ---
     title: 'Contenido Pagina'
-    layout: '../../layouts/Layout.astro'
+    layout: '../../layouts/LayoutMarkdown.astro'
+---
+Aquí tienes una guía detallada sobre cómo integrar **Driver.js** en tu proyecto web para crear tours interactivos:
+
 ---
 
-# Uso de Driver.js
+## 📦 **Instalación de Driver.js**
 
-Driver.js es una biblioteca de JavaScript ligera que te permite crear tours interactivos en tu aplicación web. A continuación, se detalla cómo integrarla y personalizarla en tu proyecto.
-
-## Instalación
-
-Puedes incluir Driver.js en tu proyecto a través de un CDN. Simplemente añade las siguientes líneas en tu archivo HTML:
+Puedes incluir **Driver.js** en tu proyecto a través de un CDN. Solo necesitas agregar las siguientes líneas en tu archivo HTML:
 
 ```html
+<p>hola</p>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/driver.js/0.9.6/driver.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/driver.js/0.9.6/driver.min.js"></script>
 ```
 
-## Ejemplo Básico
+---
 
-Aquí hay un ejemplo simple de cómo usar Driver.js en un archivo HTML.
+## 🔑 **Ejemplo Básico**
+
+Este es un ejemplo simple de cómo usar Driver.js en un archivo HTML:
 
 ```html
 <!DOCTYPE html>
@@ -82,9 +84,11 @@ Aquí hay un ejemplo simple de cómo usar Driver.js en un archivo HTML.
 </html>
 ```
 
-## Personalización de los Popovers
+---
 
-Puedes personalizar el estilo de los popovers utilizando clases CSS. Aquí hay un ejemplo de cómo hacerlo:
+## 🎨 **Personalización de los Popovers**
+
+Puedes personalizar el estilo de los popovers utilizando clases CSS. Por ejemplo, para cambiar el fondo y el color del texto:
 
 ```css
 .custom-popover {
@@ -94,7 +98,7 @@ Puedes personalizar el estilo de los popovers utilizando clases CSS. Aquí hay u
 }
 ```
 
-Para aplicar la clase personalizada, agrega la propiedad `className` en los pasos del tour:
+Luego, para aplicar esta clase personalizada a los popovers, simplemente agrega la propiedad `className` en los pasos del tour:
 
 ```javascript
 const steps = [
@@ -119,17 +123,21 @@ const steps = [
 ];
 ```
 
-## Opciones de Configuración
+---
 
-Driver.js permite diversas configuraciones, como:
+## ⚙️ **Opciones de Configuración**
 
--   **position:** Define la posición del popover (`top`, `bottom`, `left`, `right`).
--   **className:** Agrega clases CSS personalizadas para el popover.
--   **title:** El título del popover.
--   **description:** La descripción que aparecerá en el popover.
+**Driver.js** ofrece varias configuraciones que puedes usar para personalizar la experiencia del tour:
 
-## Conclusión
+- **position:** Define la posición del popover (`top`, `bottom`, `left`, `right`).
+- **className:** Permite agregar clases CSS personalizadas al popover.
+- **title:** Título del popover.
+- **description:** Descripción que aparecerá en el popover.
 
-Driver.js es una herramienta poderosa para mejorar la experiencia de usuario mediante tours interactivos. Con su fácil integración y opciones de personalización, puedes crear guías intuitivas para tus aplicaciones.
+---
 
-Para más información, consulta la [documentación oficial de Driver.js](https://github.com/kamranahmedfo/driver.js).
+## 📝 **Conclusión**
+
+**Driver.js** es una herramienta muy útil para crear tours interactivos en tu aplicación web. Con su fácil integración y amplias opciones de personalización, puedes mejorar la experiencia del usuario proporcionándole guías interactivas para interactuar con tu aplicación.
+
+Para obtener más detalles y ejemplos avanzados, puedes consultar la [documentación oficial de Driver.js](https://github.com/kamranahmedfo/driver.js).

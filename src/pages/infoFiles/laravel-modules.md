@@ -1,30 +1,30 @@
 ---
     title: 'Contenido Pagina'
-    layout: '../../layouts/Layout.astro'
+    layout: '../../layouts/LayoutMarkdown.astro'
 ---
 
-# Laravel-Modules
+## **Crear un Proyecto Laravel**
 
-## Crear un proyecto Laravel
-
-1. **Crear el proyecto**  
+1. **Crear el Proyecto**  
    Ejecuta el siguiente comando para crear un nuevo proyecto Laravel:
 
     ```bash
     composer create-project laravel/laravel your-project-name 9.*
     ```
 
-## Instalar laravel-modules
+---
 
-2. **Instalar el paquete**  
-   Añade el paquete de módulos:
+## **Instalar Laravel-Modules**
+
+2. **Instalar el Paquete**  
+   Añade el paquete `laravel-modules` a tu proyecto:
 
     ```bash
     composer require nwidart/laravel-modules 9.*
     ```
 
-3. **Publicar el proveedor**  
-   Ejecuta el siguiente comando para publicar los archivos del proveedor:
+3. **Publicar el Proveedor**  
+   Publica los archivos del proveedor con este comando:
 
     ```bash
     php artisan vendor:publish --provider="Nwidart\Modules\LaravelModulesServiceProvider"
@@ -44,66 +44,74 @@
     }
     ```
 
-5. **Actualizar el autoload**  
-   Ejecuta el siguiente comando para regenerar el autoload:
+5. **Actualizar el Autoload**  
+   Regenera el autoload con el siguiente comando:
 
     ```bash
     composer dump-autoload
     ```
 
-## Instalar Livewire-modules
+---
+
+## **Instalar Livewire-modules**
 
 6. **Instalar Livewire**  
-   Agrega el paquete de Livewire:
+   Agrega Livewire a tu proyecto:
 
     ```bash
     composer require livewire/livewire
     ```
 
-7. **Instalar el paquete de Livewire para módulos**  
-   Añade el paquete específico para Livewire y módulos:
+7. **Instalar el Paquete de Livewire para Módulos**  
+   Instala el paquete que permite usar Livewire en los módulos:
 
     ```bash
     composer require mhmiton/laravel-modules-livewire
     ```
 
-8. **Publicar la configuración de Livewire**  
-   Ejecuta el siguiente comando:
+8. **Publicar la Configuración de Livewire**  
+   Publica la configuración de Livewire para los módulos con:
 
     ```bash
     php artisan vendor:publish --tag=modules-livewire-config
     ```
 
-## Instalar dependencias adicionales (opcional)
+---
+
+## **Instalar Dependencias Adicionales (Opcional)**
 
 9. **Instalar Laravel Collective**  
-   Si deseas usar formularios, ejecuta:
+   Si deseas usar formularios en Laravel, ejecuta:
 
     ```bash
     composer require laravelcollective/html
     ```
 
-## Crear un módulo
+---
 
-10. **Crear un nuevo módulo**  
-    Ejecuta el siguiente comando para crear un módulo:
+## **Crear un Módulo**
+
+10. **Crear un Nuevo Módulo**  
+   Para crear un módulo nuevo, usa el siguiente comando:
 
     ```bash
     php artisan module:make module-name
     ```
 
-11. **Crear un módulo Livewire**  
-    Ejecuta el siguiente comando para crear un módulo Livewire:
+11. **Crear un Módulo Livewire**  
+   Para crear un módulo Livewire, ejecuta:
 
     ```bash
     php artisan module:make-livewire Pages/AboutPage
     ```
 
-## Información sobre Livewire
+---
 
-### Rutas
+## **Información sobre Livewire**
 
-Configura las rutas para tu módulo:
+### **Rutas**
+
+Configura las rutas para tu módulo de la siguiente manera:
 
 ```php
 Route::prefix('inventory')->group(function() {
@@ -111,7 +119,7 @@ Route::prefix('inventory')->group(function() {
 });
 ```
 
-### Plantilla básica de Livewire
+### **Plantilla Básica de Livewire**
 
 Crea el archivo `view/layouts/master.blade.php` con el siguiente contenido:
 
@@ -134,15 +142,15 @@ Crea el archivo `view/layouts/master.blade.php` con el siguiente contenido:
 </html>
 ```
 
-### Añadir componente Livewire
+### **Añadir Componente Livewire**
 
-Para añadir un componente Livewire, utiliza el siguiente código:
+Para añadir un componente Livewire, usa el siguiente código en tu vista:
 
 ```blade
 @livewire('module::administration.product.product')
 ```
 
-### Plantilla del módulo
+### **Plantilla del Módulo**
 
 Crea la plantilla del módulo con el siguiente contenido:
 
@@ -155,3 +163,7 @@ Crea la plantilla del módulo con el siguiente contenido:
     @livewire('module::administration.product.product')
 @endsection
 ```
+
+---
+
+Con estos pasos, tu proyecto Laravel estará completamente configurado para usar módulos y Livewire. Puedes comenzar a crear y organizar tu aplicación usando estas herramientas poderosas.

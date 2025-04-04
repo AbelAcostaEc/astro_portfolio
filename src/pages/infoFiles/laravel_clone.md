@@ -1,57 +1,76 @@
 ---
     title: 'Contenido Pagina'
-    layout: '../../layouts/Layout.astro'
+    layout: '../../layouts/LayoutMarkdown.astro'
 ---
 
 # Clonación de GitHub
 
 Para configurar el proyecto, sigue estos pasos:
+Aquí tienes los pasos para configurar un proyecto clonado desde GitHub:
 
-1. **Instalar dependencias**  
-   Ejecuta el siguiente comando para instalar las dependencias del proyecto:
+---
 
-    ```bash
-    composer install
-    ```
+## 1. **Instalar Dependencias**
 
-2. **Actualizar dependencias**  
-   Si necesitas actualizar las dependencias, usa:
+Primero, asegúrate de instalar todas las dependencias necesarias para el proyecto ejecutando el siguiente comando:
 
-    ```bash
-    composer update
-    ```
+```bash
+composer install
+```
 
-3. **Configurar el archivo de entorno**  
-   Copia el archivo de ejemplo a tu archivo de configuración:
+---
 
-    ```bash
-    cp .env.example .env
-    ```
+## 2. **Actualizar Dependencias**
 
-4. **Generar la clave de la aplicación**  
-   Genera una nueva clave para tu aplicación:
+Si ya has instalado las dependencias previamente pero necesitas actualizarlas, ejecuta:
 
-    ```bash
-    php artisan key:generate
-    ```
+```bash
+composer update
+```
 
-5. **Configurar la base de datos**  
-   Abre el archivo `.env` y ajusta las siguientes configuraciones de la base de datos:
+---
 
-    ```plaintext
-    DB_CONNECTION=mysql
-    DB_HOST=nombre_del_host
-    DB_PORT=puerto_de_la_base_de_datos
-    DB_DATABASE=nombre_de_la_base_de_datos
-    DB_USERNAME=nombre_de_usuario_de_la_base_de_datos
-    DB_PASSWORD=contraseña_de_la_base_de_datos
-    ```
+## 3. **Configurar el Archivo de Entorno**
 
-6. **Ejecutar migraciones**  
-   Aplica las migraciones para crear las tablas en la base de datos:
+Luego, debes configurar el archivo de entorno del proyecto. Copia el archivo de ejemplo a `.env`:
 
-    ```bash
-    php artisan migrate
-    ```
+```bash
+cp .env.example .env
+```
 
-¡Y eso es todo! Tu proyecto debería estar listo para usarse.
+---
+
+## 4. **Generar la Clave de la Aplicación**
+
+Genera una nueva clave para tu aplicación con el siguiente comando:
+
+```bash
+php artisan key:generate
+```
+
+Esto establecerá una clave única para la aplicación en el archivo `.env`.
+
+---
+
+## 5. **Configurar la Base de Datos**
+
+Abre el archivo `.env` y configura los detalles de la base de datos. Modifica las siguientes líneas para reflejar los datos correctos de tu base de datos:
+
+```plaintext
+DB_CONNECTION=mysql
+DB_HOST=nombre_del_host
+DB_PORT=puerto_de_la_base_de_datos
+DB_DATABASE=nombre_de_la_base_de_datos
+DB_USERNAME=nombre_de_usuario_de_la_base_de_datos
+DB_PASSWORD=contraseña_de_la_base_de_datos
+```
+
+---
+
+## 6. **Ejecutar Migraciones**
+
+Para crear las tablas necesarias en tu base de datos, ejecuta las migraciones:
+
+```bash
+php artisan migrate
+```

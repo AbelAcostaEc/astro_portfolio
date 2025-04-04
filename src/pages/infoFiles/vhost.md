@@ -1,46 +1,58 @@
 ---
     title: 'Contenido Pagina'
-    layout: '../../layouts/Layout.astro'
+    layout: '../../layouts/LayoutMarkdown.astro'
 ---
 
 # Configuración de vHosts en XAMPP - Windows
 
-Para configurar un virtual host en XAMPP, sigue estos pasos:
+Aquí tienes los pasos completos para configurar un Virtual Host en XAMPP en Windows:
 
-## 1. Modificar el archivo `hosts`
+---
 
-Accede al archivo `hosts` en la siguiente ubicación:
+### **1. Modificar el archivo `hosts`**
 
-```
-C:\Windows\System32\drivers\etc
-```
+1. Abre el archivo `hosts` que se encuentra en:
 
-Agrega la siguiente línea al final del archivo:
+    ```
+    C:\Windows\System32\drivers\etc
+    ```
 
-```plaintext
-127.0.0.1 miproyecto.local.com
-```
+2. Abre el archivo `hosts` con un editor de texto **como administrador** (por ejemplo, Notepad++ o el Bloc de Notas). Asegúrate de ejecutar el editor con privilegios de administrador.
 
-## 2. Configurar el Virtual Host en Apache
+3. Añade la siguiente línea al final del archivo:
 
-Abre el archivo de configuración de Apache en la siguiente ruta:
+    ```plaintext
+    127.0.0.1 miproyecto.local.com
+    ```
 
-```
-C:\xampp\apache\conf\extra
-```
+   Esto redirige la URL `miproyecto.local.com` a `127.0.0.1` (tu servidor local).
 
-Edita el archivo `httpd-vhosts.conf` (o crea uno nuevo) y añade la siguiente configuración:
+---
 
-```apache
-<VirtualHost *:80>
-    DocumentRoot "C:\miproyecto\httpdocs"
-    ServerName miproyecto.local.com
-    <Directory "C:\miproyecto\httpdocs">
-        Require all granted
-    </Directory>
-</VirtualHost>
-```
+### **2. Configurar el Virtual Host en Apache**
 
-## 3. Reiniciar Apache
+1. Accede al archivo de configuración de Apache en la siguiente ruta:
 
-Después de realizar estos cambios, asegúrate de reiniciar el servidor Apache desde el panel de control de XAMPP para que la configuración surta efecto.
+    ```
+    C:\xampp\apache\conf\extra
+    ```
+
+2. Abre el archivo `httpd-vhosts.conf` en un editor de texto.
+
+3. Agrega la siguiente configuración al final del archivo:
+
+    ```apache
+    <VirtualHost *:80>
+        DocumentRoot "C:\miproyecto\httpdocs"
+        ServerName miproyecto.local.com
+        <Directory "C:\miproyecto\httpdocs">
+            Require all granted
+        </Directory>
+    </VirtualHost>
+    ```
+
+   Asegúrate de reemplazar `"C:\miproyecto\httpdocs"` con la ruta correcta a la carpeta donde se encuentra tu proyecto.
+
+---
+
+### **3. Reiniciar Apache**
