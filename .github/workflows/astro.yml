@@ -20,6 +20,12 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7 # O la versión que necesites de pnpm
+      - name: Install dependencies
+        run: pnpm install
       - name: Install, build, and upload your site
         uses: withastro/action@v2
         # with:
