@@ -1448,6 +1448,7 @@ this.formData.controls['phone'].setValue('1234567890');
 
 
 
+<<<<<<< HEAD:src/pages/infoFiles/Ionic.md
 # 🚀 18. **Pipes en Angular**
 
 Los **Pipes** en Angular son transformadores de valores que puedes utilizar directamente en las plantillas para mostrar datos de una manera más amigable o formateada. Los pipes se usan para transformar datos en la vista, sin modificar la lógica del componente.
